@@ -1,0 +1,268 @@
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #000;
+}
+::-webkit-scrollbar-thumb {
+    background: #0f0;
+    border: 2px solid #000;
+}
+
+@keyframes blink {
+    0% {color: #000;}
+    50% {color: #0f0;}
+    100% {color: #000;}
+}
+.blink {
+    animation: blink 1s infinite;
+    font-size: larger;
+}
+
+@keyframes rainbow {
+    0% {border-color: red;}
+    14% {border-color: orange;}
+    28% {border-color: yellow;}
+    42% {border-color: lime;}
+    57% {border-color: blue;}
+    71% {border-color: indigo;}
+    85% {border-color: violet;}
+    100% {border-color: red;}
+}
+
+/* toasts */
+.fas.fa-times {
+    color: #0f0;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.fas.fa-times:hover {
+    color: #f4623a;
+}
+
+.toast-header {
+    border-bottom: 2px solid #0f0;
+}
+
+section {
+    border: 3px solid;
+    animation: rainbow 2s infinite;
+    padding: 20px;
+    margin: 20px;
+}
+
+.pixel-border {
+    border: 3px dashed #0f0;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Navigation */
+.color-primary {
+    color: #0f0 !important;
+}
+
+
+/* Masthead */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icon {
+    color: #0f0;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #f4623a;
+}
+
+/* Gallery */
+.slick-slider img {
+    width: 300px;
+    height: auto;
+}
+
+.slick-slide {
+    transition: transform 0.5s;
+}
+
+.slick-slide:hover {
+    transform: scale(1.3);
+}
+
+@media screen and (max-width: 1200px) {
+    .slick-slider img {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .slick-slider img {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .slick-slider img {
+        width: 150px;
+    }
+}
+
+/* Road Map */
+.timeline-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.timeline {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline {
+    padding-left: 0 !important;
+}
+
+.timeline .li {
+    transition: all 200ms ease-in;
+}
+
+.status {
+    padding: 0px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #ffffff;
+    position: relative;
+    transition: all 200ms ease-in;
+}
+
+.status p {
+    font-weight: 600;
+    padding-top: 15px;
+    width: max-content;
+}
+
+.status:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: -10px;
+    left: 42%;
+    transition: all 200ms ease-in;
+}
+
+.li.complete .status {
+    border-top: 2px solid #0f0;
+}
+
+.li.complete .status:before {
+    background-color: #0f0;
+    border: none;
+    transition: all 200ms ease-in;
+}
+
+.li.complete .status p {
+    color: #0f0;
+}
+
+#roadmap-container .card {
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5), 0px 6px 20px 0px rgba(0, 0, 0, 0.49);
+}
+
+#btn-left {
+    margin-right: 5px;
+}
+
+#btn-right {
+    margin-left: 5px;
+}
+
+@media (max-device-width: 991px) {
+    .status {
+        padding: 0px 20px;
+    }
+
+    .status:before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        border-radius: 20px;
+        top: -8px;
+    }
+}
+
+
+@media (max-device-width: 768px) {
+    .status p {
+        font-size: 12px;
+    }
+
+    .status:before {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -9px;
+        left: 42%;
+    }
+}
+
+@media (max-device-width: 575px) {
+    .status p {
+        font-size: 5px;
+        width: auto;
+    }
+}
+
+@media (max-device-width: 452px) {
+    .masthead h5 {
+        font-size: 20px !important;
+    }
+
+    .masthead h1 {
+        font-size: 30px !important;
+    }
+
+    .masthead p {
+        font-size: 15px;
+    }
+
+    #About h2,
+    #About p {
+        font-size: 12px;
+    }
+
+    #Gallery h2,
+    #Gallery p {
+        font-size: 12px;
+    }
+
+    .card-body h5,
+    .card-body p {
+        font-size: 12px;
+    }
+
+}
+
+/* WalletAddress */
+#WalletAddress a {
+    color: black !important;
+}
+
+/* Footer */
+footer span {
+    font-size: 5px;
+}
