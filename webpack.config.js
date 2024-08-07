@@ -55,11 +55,11 @@ export const plugins = [
       { from: "assets", to: "assets" },
     ],
   }),
-  new ProvidePlugin({
-    $: 'jquery',
-    jQuery: 'jquery',
-    'window.jQuery': 'jquery'
-  }),
+  // new ProvidePlugin({
+  //   $: 'jquery',
+  //   jQuery: 'jquery',
+  //   'window.jQuery': 'jquery'
+  // }),
   new DefinePlugin({
     'typeof window.ethereum': JSON.stringify('object'),
     'process.env': JSON.stringify({

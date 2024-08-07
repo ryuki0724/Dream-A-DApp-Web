@@ -10,6 +10,7 @@ import '../css/content.css';
 import '../css/startPage.css';
 
 // 导入 JavaScript 库
+import '@popperjs/core';
 import 'bootstrap';
 import 'slick-carousel';
 import Web3 from 'web3';
