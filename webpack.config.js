@@ -62,7 +62,9 @@ export const plugins = [
   }),
   new DefinePlugin({
     'typeof window.ethereum': JSON.stringify('object'),
-    'process.env.NODE_ENV': JSON.stringify('production')
+    'process.env': JSON.stringify({
+      NODE_ENV: 'production',
+    })
   }),
   new ImageminWebpackPlugin.default({
     plugins: [
@@ -84,5 +86,10 @@ export default {
   output,
   module,
   plugins,
-  optimization
+  optimization,
+  node: {
+    global: true,
+    __filename: 'mock',
+    __dirname: 'mock',
+  },
 };
