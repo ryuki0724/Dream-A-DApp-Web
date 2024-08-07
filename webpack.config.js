@@ -13,7 +13,8 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: resolve(__dirname, 'dist'),
-    publicPath: '/'
+    publicPath: '/Dream-A-DApp-Web/',
+    clean: true,
   },
   module: {
     rules: [
