@@ -1,11 +1,10 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
-const webpack = require('webpack');
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
+import webpack from 'webpack';
 
+const { ProvidePlugin, DefinePlugin } = webpack;
 const resolve = path.resolve;
-const ProvidePlugin = webpack.ProvidePlugin;
-const DefinePlugin = webpack.DefinePlugin;
 
 export default {
   entry: {
