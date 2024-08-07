@@ -14,7 +14,7 @@ export const entry = {
 export const output = {
   filename: '[name].bundle.js',
   path: _resolve(__dirname, 'dist'),
-  publicPath: '/Dream-A-DApp-Web/',
+  publicPath: '/',
   clean: true,
 };
 export const module = {
