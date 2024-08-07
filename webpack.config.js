@@ -1,6 +1,8 @@
 import { resolve as _resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ImageminWebpackPlugin from 'imagemin-webpack-plugin';
+import imageminMozjpeg from 'imagemin-mozjpeg';
 import CopyPlugin from 'copy-webpack-plugin';
 import webpack from 'webpack';
 
@@ -60,8 +62,15 @@ export const plugins = [
   }),
   new DefinePlugin({
     'typeof window.ethereum': JSON.stringify('object'),
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-    'process.env.MY_ENV': JSON.stringify(process.env.MY_ENV),
+    'process.env.NODE_ENV': JSON.stringify('production')
+  }),
+  new ImageminWebpackPlugin.default({
+    plugins: [
+      imageminMozjpeg({
+        quality: 75,
+        progressive: true,
+      }),
+    ],
   }),
 ];
 export const optimization = {
