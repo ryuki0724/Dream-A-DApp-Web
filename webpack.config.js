@@ -1,4 +1,4 @@
-import path from 'path';
+const path = require('path');
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
 import webpack from 'webpack';
