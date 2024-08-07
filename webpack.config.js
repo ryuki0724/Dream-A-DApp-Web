@@ -14,7 +14,7 @@ export const entry = {
 export const output = {
   filename: '[name].bundle.js',
   path: _resolve(__dirname, 'dist'),
-  publicPath: '/',
+  publicPath: '/Dream-A-DApp-Web/',
   clean: true,
 };
 export const module = {
@@ -69,3 +69,5 @@ export const optimization = {
     chunks: 'all',
   },
 };
+
+export default config;
