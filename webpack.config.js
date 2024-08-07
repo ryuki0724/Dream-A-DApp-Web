@@ -1,21 +1,15 @@
-import { resolve } from 'path';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import CopyPlugin from 'copy-webpack-plugin';
-import { ProvidePlugin, DefinePlugin } from 'webpack';
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack');
+
+const resolve = path.resolve;
+const ProvidePlugin = webpack.ProvidePlugin;
+const DefinePlugin = webpack.DefinePlugin;
 
 export default {
   entry: {
     main: './src/index.js',
-    vendor: [
-      'bootstrap',
-      'bootstrap/dist/css/bootstrap.min.css',
-      'bootstrap-icons/font/bootstrap-icons.css',
-      'jquery',
-      'slick-carousel',
-      'slick-carousel/slick/slick.css',
-      'slick-carousel/slick/slick-theme.css',
-      'web3'
-    ]
   },
   output: {
     filename: '[name].bundle.js',
@@ -51,6 +45,7 @@ export default {
   plugins: [
     new HtmlWebpackPlugin({
       template: './index.html',
+      inject: true
     }),
     new CopyPlugin({
       patterns: [
