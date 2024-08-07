@@ -1,9 +1,9 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
-const webpack = require('webpack');
+import { resolve } from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
+import { ProvidePlugin, DefinePlugin } from 'webpack';
 
-module.exports = {
+export default {
   entry: {
     main: './src/index.js',
     vendor: [
@@ -19,7 +19,8 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: resolve(__dirname, 'dist'),
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -41,6 +42,10 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
         type: 'asset/resource',
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
   plugins: [
@@ -52,12 +57,12 @@ module.exports = {
         { from: "assets", to: "assets" },
       ],
     }),
-    new webpack.ProvidePlugin({
+    new ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery'
     }),
-    new webpack.DefinePlugin({
+    new DefinePlugin({
       'typeof window.ethereum': JSON.stringify('object')
     }),
   ],
