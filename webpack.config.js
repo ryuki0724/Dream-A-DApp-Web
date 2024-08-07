@@ -70,4 +70,10 @@ export const optimization = {
   },
 };
 
-export default config;
+export default {
+  entry,
+  output,
+  module,
+  plugins,
+  optimization
+};
