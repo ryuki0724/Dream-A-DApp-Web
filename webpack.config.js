@@ -6,7 +6,7 @@ const webpack = require('webpack');
 const { ProvidePlugin, DefinePlugin } = webpack;
 const resolve = path.resolve;
 
-export default {
+module.exports = {
   entry: {
     main: './src/index.js',
   },
