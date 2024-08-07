@@ -1,17 +1,19 @@
-import { resolve as _resolve } from 'path';
+import { resolve as _resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
 import webpack from 'webpack';
 
 const { ProvidePlugin, DefinePlugin } = webpack;
-const resolve = _resolve;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export const entry = {
   main: './src/index.js',
 };
 export const output = {
   filename: '[name].bundle.js',
-  path: resolve(__dirname, 'dist'),
+  path: _resolve(__dirname, 'dist'),
   publicPath: '/Dream-A-DApp-Web/',
   clean: true,
 };
