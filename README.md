@@ -15,6 +15,8 @@ Dream Utopia is a web3 project that allows users to mint NFTs in a decentralized
 ## Live Demo
 
 Experience Dream Utopia: [https://ryuki0724.github.io/Dream-A-DApp-Web/](https://ryuki0724.github.io/Dream-A-DApp-Web/)
+![image](https://github.com/user-attachments/assets/76797809-3a6a-4ce9-a723-1af3e6fdc02d)
+
 
 ## Project Description
 
